@@ -1,0 +1,152 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CmsUno\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-04 17:00+0200\n"
+"PO-Revision-Date: 2017-06-04 17:00+0200\n"
+"Last-Translator: jacques Malgrange <contacter@boiteasite.fr>\n"
+"Language-Team: Jacques Malgrange <contacter@boiteasite.fr>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Report-\tmsgstr-Bugs-To: \n"
+"Report-\t\tmsgstr-Bugs-To: \n"
+"X-Poedit-KeywordsList: _;T_\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: iso-8859-1\n"
+"X-Generator: Poedit 1.8.12\n"
+"X-Poedit-SearchPath-0: ../../..\n"
+
+#: ../../../transition.php:19
+msgid "Transition"
+msgstr "Transition"
+
+#: ../../../transition.php:20
+msgid "This plugin adds nice transitions between the chapters of the page."
+msgstr ""
+"Este plugin añade buenas transiciones entre los capítulos de la página."
+
+#: ../../../transition.php:21
+msgid "It uses different tools that work independently :"
+msgstr "Utiliza diferentes herramientas que funcionan independientemente :"
+
+#: ../../../transition.php:23
+msgid "A pure CSS3 tool with a lot transitions."
+msgstr "Una herramienta CSS3 pura con muchas transiciones."
+
+#: ../../../transition.php:24
+msgid "A jQuery tool to create a parallax effect with images."
+msgstr "Una herramienta jQuery para crear un efecto de paralaje con imágenes."
+
+#: ../../../transition.php:27
+msgid "Set Chapters Transitions"
+msgstr "Establecer capítulos Transiciones"
+
+#: ../../../transition.php:30 ../../../transition.php:76
+msgid "Chapter"
+msgstr "Capítulo"
+
+#: ../../../transition.php:43
+msgid "Chapter of the page concerned by the transition."
+msgstr "Capítulo de la página afectada por la transición."
+
+#: ../../../transition.php:46
+msgid "Transition type"
+msgstr "Tipo de transición"
+
+#: ../../../transition.php:61
+msgid "Type of content transition when arrive on the selected chapter."
+msgstr "Tipo de transición de contenido cuando llega al capítulo seleccionado."
+
+#: ../../../transition.php:64 ../../../transition.php:76
+msgid "Parallax image"
+msgstr "Imagen de paralaje"
+
+#: ../../../transition.php:67
+msgid "File manager"
+msgstr "Gestor de archivos"
+
+#: ../../../transition.php:69
+msgid "Add a section above the chapter with a parallax image. JQuery needed."
+msgstr ""
+"Añada una sección por encima del capítulo con una imagen de paralaje. JQuery "
+"necesario."
+
+#: ../../../transition.php:72 ../../../transition.php:97
+msgid "Save settings"
+msgstr "Guardar ajustes"
+
+#: ../../../transition.php:72 ../../../transition.php:97
+msgid "Save"
+msgstr "Guardar"
+
+#: ../../../transition.php:76
+msgid "Animation"
+msgstr "Animación"
+
+#: ../../../transition.php:79
+msgid "Config"
+msgstr "Configure"
+
+#: ../../../transition.php:82
+msgid "Animation duration"
+msgstr "Duración de la animación"
+
+#: ../../../transition.php:84
+msgid "Duration of the animation in second. Default : 1"
+msgstr "Duración de la animación en segundo. Predeterminado: 1"
+
+#: ../../../transition.php:87
+msgid "Animation delay"
+msgstr "Demora de la animación"
+
+#: ../../../transition.php:89
+msgid "Delay before the animation start in second. Default : 0"
+msgstr "Duración de la animación en segundo. Predeterminado: 1"
+
+#: ../../../transition.php:92
+msgid "Parallax image height"
+msgstr "Altura de la imagen en paralaje"
+
+#: ../../../transition.php:94
+msgid ""
+"Height ratio of the parallax image relative to the height of the screen. "
+"Default : 0.4"
+msgstr ""
+"Relación de altura de la imagen de paralaje respecto a la altura de la "
+"pantalla. Valor predeterminado: 0.4"
+
+#: ../../../transition.php:155 ../../../transition.php:168
+msgid "Backup performed"
+msgstr "Copia de seguridad realizada"
+
+#: ../../../transition.php:156 ../../../transition.php:169
+msgid "Impossible backup"
+msgstr "copia de seguridad Imposible"
+
+#~ msgid "Uno CSS"
+#~ msgstr "Uno CSS"
+
+#~ msgid ""
+#~ "This plugin allows you to add custom CSS to the website without having to "
+#~ "modify the template."
+#~ msgstr ""
+#~ "Este plugin te permite agregar CSS personalizado a la web sin tener que "
+#~ "modificar el template."
+
+#~ msgid "The code will be installed at the top of the page, in the /head/."
+#~ msgstr ""
+#~ "Se instalará el código en la parte superior de la página, en el /head/."
+
+#~ msgid "CSS Styles"
+#~ msgstr "Estilos CSS"
+
+#~ msgid "Write CSS"
+#~ msgstr "Escribir CSS"
+
+#~ msgid "without"
+#~ msgstr "sin"
+
+#~ msgid "the two opening and closing styles tags."
+#~ msgstr "tanto las etiquetas de apertura y cierre."
