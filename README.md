@@ -30,4 +30,5 @@ Use animate.css and jquery.imageScroll.js.
 
 ### Versions ###
 
+* 1.1 - 27/12/2017 : Add Div & sub-Div
 * 1.0 - 04/06/2017 : First stable version

@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CmsUno\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-04 17:00+0200\n"
-"PO-Revision-Date: 2017-06-04 17:00+0200\n"
-"Last-Translator: jacques Malgrange <contacter@boiteasite.fr>\n"
+"POT-Creation-Date: 2017-12-26 18:40+0100\n"
+"PO-Revision-Date: 2017-12-26 18:41+0100\n"
+"Last-Translator: malgrange <jacques.malgrange@gmail.com>\n"
 "Language-Team: Jacques Malgrange <contacter@boiteasite.fr>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Poedit-KeywordsList: _;T_\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: iso-8859-1\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: ../../..\n"
 
 #: ../../../transition.php:19
@@ -43,7 +43,7 @@ msgstr "Una herramienta jQuery para crear un efecto de paralaje con imágenes."
 msgid "Set Chapters Transitions"
 msgstr "Establecer capítulos Transiciones"
 
-#: ../../../transition.php:30 ../../../transition.php:76
+#: ../../../transition.php:30 ../../../transition.php:93
 msgid "Chapter"
 msgstr "Capítulo"
 
@@ -59,7 +59,7 @@ msgstr "Tipo de transición"
 msgid "Type of content transition when arrive on the selected chapter."
 msgstr "Tipo de transición de contenido cuando llega al capítulo seleccionado."
 
-#: ../../../transition.php:64 ../../../transition.php:76
+#: ../../../transition.php:64 ../../../transition.php:95
 msgid "Parallax image"
 msgstr "Imagen de paralaje"
 
@@ -73,43 +73,59 @@ msgstr ""
 "Añada una sección por encima del capítulo con una imagen de paralaje. JQuery "
 "necesario."
 
-#: ../../../transition.php:72 ../../../transition.php:97
+#: ../../../transition.php:72 ../../../transition.php:96
+msgid "DIV"
+msgstr "DIV"
+
+#: ../../../transition.php:77
+msgid "Add a DIV block with Class and/or Style that includes the chapter."
+msgstr "Agregue un bloque DIV con clase y/o estilo que incluya el capítulo."
+
+#: ../../../transition.php:80 ../../../transition.php:97
+msgid "Sub-DIV"
+msgstr "Sub-DIV"
+
+#: ../../../transition.php:85
+msgid "Add a DIV block inside the previous one that includes the chapter."
+msgstr "Agregue un bloque DIV dentro del anterior que incluye el capítulo."
+
+#: ../../../transition.php:88 ../../../transition.php:119
 msgid "Save settings"
 msgstr "Guardar ajustes"
 
-#: ../../../transition.php:72 ../../../transition.php:97
+#: ../../../transition.php:88 ../../../transition.php:119
 msgid "Save"
 msgstr "Guardar"
 
-#: ../../../transition.php:76
+#: ../../../transition.php:94
 msgid "Animation"
 msgstr "Animación"
 
-#: ../../../transition.php:79
+#: ../../../transition.php:101
 msgid "Config"
 msgstr "Configure"
 
-#: ../../../transition.php:82
+#: ../../../transition.php:104
 msgid "Animation duration"
 msgstr "Duración de la animación"
 
-#: ../../../transition.php:84
+#: ../../../transition.php:106
 msgid "Duration of the animation in second. Default : 1"
 msgstr "Duración de la animación en segundo. Predeterminado: 1"
 
-#: ../../../transition.php:87
+#: ../../../transition.php:109
 msgid "Animation delay"
 msgstr "Demora de la animación"
 
-#: ../../../transition.php:89
+#: ../../../transition.php:111
 msgid "Delay before the animation start in second. Default : 0"
 msgstr "Duración de la animación en segundo. Predeterminado: 1"
 
-#: ../../../transition.php:92
+#: ../../../transition.php:114
 msgid "Parallax image height"
 msgstr "Altura de la imagen en paralaje"
 
-#: ../../../transition.php:94
+#: ../../../transition.php:116
 msgid ""
 "Height ratio of the parallax image relative to the height of the screen. "
 "Default : 0.4"
@@ -117,11 +133,11 @@ msgstr ""
 "Relación de altura de la imagen de paralaje respecto a la altura de la "
 "pantalla. Valor predeterminado: 0.4"
 
-#: ../../../transition.php:155 ../../../transition.php:168
+#: ../../../transition.php:197 ../../../transition.php:210
 msgid "Backup performed"
 msgstr "Copia de seguridad realizada"
 
-#: ../../../transition.php:156 ../../../transition.php:169
+#: ../../../transition.php:198 ../../../transition.php:211
 msgid "Impossible backup"
 msgstr "copia de seguridad Imposible"
 

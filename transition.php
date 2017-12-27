@@ -68,12 +68,34 @@ if (isset($_POST['action']))
 					</td>
 					<td><em><?php echo T_("Add a section above the chapter with a parallax image. JQuery needed.");?></em></td>
 				</tr>
+				<tr>
+					<td><label><?php echo T_("DIV");?></label></td>
+					<td style="min-width:245px;">
+						<input type="text" class="input" style="max-width:106px;" name="transitionCL1" id="transitionCL1" placeholder="CLASS" value="" />
+						<input type="text" class="input" style="max-width:106px;" name="transitionST1" id="transitionST1" placeholder="STYLE" value="" />
+					</td>
+					<td><em><?php echo T_("Add a DIV block with Class and/or Style that includes the chapter.");?></em></td>
+				</tr>
+				<tr>
+					<td><label><?php echo T_("Sub-DIV");?></label></td>
+					<td style="min-width:245px;">
+						<input type="text" class="input" style="max-width:106px;" name="transitionCL2" id="transitionCL2" placeholder="CLASS" value="" />
+						<input type="text" class="input" style="max-width:106px;" name="transitionST2" id="transitionST2" placeholder="STYLE" value="" />
+					</td>
+					<td><em><?php echo T_("Add a DIV block inside the previous one that includes the chapter.");?></em></td>
+				</tr>
 			</table>
 			<div class="bouton fr" onClick="transition_save();" title="<?php echo T_("Save settings");?>"><?php echo T_("Save");?></div>
 			<div class="clear"></div>
 			<div id="transitionLoad">
 				<table>
-					<tr><th><?php echo T_("Chapter");?></th><th><?php echo T_("Animation");?></th><th><?php echo T_("Parallax image");?></th></tr>
+					<tr>
+						<th><?php echo T_("Chapter");?></th>
+						<th><?php echo T_("Animation");?></th>
+						<th><?php echo T_("Parallax image");?></th>
+						<th><?php echo T_("DIV");?></th>
+						<th><?php echo T_("Sub-DIV");?></th>
+					</tr>
 				</table>
 			</div>
 			<h3><?php echo T_("Config");?></h3>
@@ -111,12 +133,20 @@ if (isset($_POST['action']))
 			'duration'=>(isset($a['duration'])?$a['duration']:'1'),
 			'delay'=>(isset($a['delay'])?$a['delay']:'0'),
 			'ratio'=>(isset($a['ratio'])?$a['ratio']:'0.4'),
+			'cla1'=>(isset($a['cla1'])?$a['cla1']:''),
+			'cla2'=>(isset($a['cla2'])?$a['cla2']:''),
+			'sty1'=>(isset($a['sty1'])?$a['sty1']:''),
+			'sty2'=>(isset($a['sty2'])?$a['sty2']:''),
 			'chap'=>array()
 			);
 		foreach($b['chap'] as $k=>$v)
 			{
 			$transition = (isset($a['chap'][$v['d']]['tr'])?$a['chap'][$v['d']]['tr']:"");
 			$img = (isset($a['chap'][$v['d']]['im'])?$a['chap'][$v['d']]['im']:"");
+			$cla1 = (isset($a['chap'][$v['d']]['cla1'])?$a['chap'][$v['d']]['cla1']:"");
+			$cla2 = (isset($a['chap'][$v['d']]['cla2'])?$a['chap'][$v['d']]['cla2']:"");
+			$sty1 = (isset($a['chap'][$v['d']]['sty1'])?$a['chap'][$v['d']]['sty1']:"");
+			$sty2 = (isset($a['chap'][$v['d']]['sty2'])?$a['chap'][$v['d']]['sty2']:"");
 			if($img)
 				{
 				$img = explode('/',$img);
@@ -125,7 +155,11 @@ if (isset($_POST['action']))
 			$c['chap'][] = array(
 				"tit" => $v["t"],
 				"tr" => $transition,
-				"im" => $img
+				"im" => $img,
+				"cla1" => $cla1,
+				"cla2" => $cla2,
+				"sty1" => $sty1,
+				"sty2" => $sty2
 				);
 			}
 		echo stripslashes(json_encode($c)); // => jQuery Ajax
@@ -135,12 +169,20 @@ if (isset($_POST['action']))
 		$chap = (isset($_POST['chap'])?strip_tags($_POST['chap']):false);
 		$typ = (!empty($_POST['typ'])?strip_tags($_POST['typ']):'');
 		$img = (!empty($_POST['img'])?strip_tags($_POST['img']):'');
+		$cla1 = (!empty($_POST['cla1'])?strip_tags($_POST['cla1']):'');
+		$cla2 = (!empty($_POST['cla2'])?strip_tags($_POST['cla2']):'');
+		$sty1 = (!empty($_POST['sty1'])?strip_tags($_POST['sty1']):'');
+		$sty2 = (!empty($_POST['sty2'])?strip_tags($_POST['sty2']):'');
 		$q = file_get_contents('../../data/'.$Ubusy.'/transition.json'); $a = json_decode($q,true);
 		$q = file_get_contents('../../data/'.$Ubusy.'/site.json'); $b = json_decode($q,true);
 		if($chap!==false)
 			{
 			$a['chap'][$chap]['tr'] = $typ;
 			$a['chap'][$chap]['im'] = $img;
+			$a['chap'][$chap]['cla1'] = $cla1;
+			$a['chap'][$chap]['cla2'] = $cla2;
+			$a['chap'][$chap]['sty1'] = $sty1;
+			$a['chap'][$chap]['sty2'] = $sty2;
 			foreach($b['chap'] as $r)
 				{
 				if($r['d']==$chap)

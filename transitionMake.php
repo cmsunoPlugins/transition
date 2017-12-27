@@ -15,6 +15,18 @@ if(file_exists('data/'.$Ubusy.'/transition.json'))
 		{
 		if(!empty($v1['tr'])) $animate .= ",'".$v1['na']."BlocChap':'".$v1['tr']."'";
 		if(!empty($v1['im'])) $parallax[$v1['na']] = $v1['im'];
+		$a0 = '<div id="'.$v1['na'].'BlocChap"';
+		$a1 = '</div><!-- #'.$v1['na'].'BlocChap -->';
+		if(!empty($v1['cla1']) || !empty($v1['sty1']))
+			{
+			$Ucontent = str_replace($a0, '<div'.(!empty($v1['cla1'])?' class="'.$v1['cla1'].'"':'').(!empty($v1['sty1'])?' style="'.$v1['sty1'].'"':'').'>'.$a0, $Ucontent);
+			$Ucontent = str_replace($a1, $a1.'</div>', $Ucontent);
+			}
+		if(!empty($v1['cla2']) || !empty($v1['sty2']))
+			{
+			$Ucontent = str_replace($a0, '<div'.(!empty($v1['cla2'])?' class="'.$v1['cla2'].'"':'').(!empty($v1['sty2'])?' style="'.$v1['sty2'].'"':'').'>'.$a0, $Ucontent);
+			$Ucontent = str_replace($a1, $a1.'</div>', $Ucontent);
+			}
 		}
 	if($animate)
 		{

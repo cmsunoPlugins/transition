@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CmsUno\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-04 17:00+0200\n"
-"PO-Revision-Date: 2017-06-04 17:00+0200\n"
-"Last-Translator: jacques Malgrange <contacter@boiteasite.fr>\n"
+"POT-Creation-Date: 2017-12-26 18:39+0100\n"
+"PO-Revision-Date: 2017-12-26 18:40+0100\n"
+"Last-Translator: malgrange <jacques.malgrange@gmail.com>\n"
 "Language-Team: Jacques Malgrange <contacter@boiteasite.fr>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Poedit-KeywordsList: _;T_\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: iso-8859-1\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: ../../..\n"
 
 #: ../../../transition.php:19
@@ -44,7 +44,7 @@ msgstr "Un outil jQuery pour séparer les chapitres avec une image en parallax."
 msgid "Set Chapters Transitions"
 msgstr "Définir les transitions par chapitre"
 
-#: ../../../transition.php:30 ../../../transition.php:76
+#: ../../../transition.php:30 ../../../transition.php:93
 msgid "Chapter"
 msgstr "Chapitre"
 
@@ -62,7 +62,7 @@ msgstr ""
 "Type de transition appliquée au contenu lorsque l'écran arrive au chapitre "
 "sélectionné."
 
-#: ../../../transition.php:64 ../../../transition.php:76
+#: ../../../transition.php:64 ../../../transition.php:95
 msgid "Parallax image"
 msgstr "Image en parallax"
 
@@ -76,53 +76,69 @@ msgstr ""
 "Ajoute une section au dessus du chapitre avec une image en parallax. JQuery "
 "doit être activé."
 
-#: ../../../transition.php:72 ../../../transition.php:97
+#: ../../../transition.php:72 ../../../transition.php:96
+msgid "DIV"
+msgstr "DIV"
+
+#: ../../../transition.php:77
+msgid "Add a DIV block with Class and/or Style that includes the chapter."
+msgstr "Ajoutez un bloc DIV avec Class et/ou Style qui englobe le chapitre."
+
+#: ../../../transition.php:80 ../../../transition.php:97
+msgid "Sub-DIV"
+msgstr "Sub-DIV"
+
+#: ../../../transition.php:85
+msgid "Add a DIV block inside the previous one that includes the chapter."
+msgstr "Ajouter un bloc DIV dans le précédent qui englobe le chapitre."
+
+#: ../../../transition.php:88 ../../../transition.php:119
 msgid "Save settings"
 msgstr "Enregistre les param&egrave;tres"
 
-#: ../../../transition.php:72 ../../../transition.php:97
+#: ../../../transition.php:88 ../../../transition.php:119
 msgid "Save"
 msgstr "Enregistrer"
 
-#: ../../../transition.php:76
+#: ../../../transition.php:94
 msgid "Animation"
 msgstr "Animation"
 
-#: ../../../transition.php:79
+#: ../../../transition.php:101
 msgid "Config"
 msgstr "Configuration"
 
-#: ../../../transition.php:82
+#: ../../../transition.php:104
 msgid "Animation duration"
 msgstr "Durée de l'animation"
 
-#: ../../../transition.php:84
+#: ../../../transition.php:106
 msgid "Duration of the animation in second. Default : 1"
 msgstr "Durée de l'animation en seconde. Défaut : 1"
 
-#: ../../../transition.php:87
+#: ../../../transition.php:109
 msgid "Animation delay"
 msgstr "Delai avant animation"
 
-#: ../../../transition.php:89
+#: ../../../transition.php:111
 msgid "Delay before the animation start in second. Default : 0"
 msgstr "Delai avant que l'animation ne commence, en seconde. Défaut : 0"
 
-#: ../../../transition.php:92
+#: ../../../transition.php:114
 msgid "Parallax image height"
 msgstr "Hauteur de l'image en parallax"
 
-#: ../../../transition.php:94
+#: ../../../transition.php:116
 msgid ""
 "Height ratio of the parallax image relative to the height of the screen. "
 "Default : 0.4"
 msgstr "Hauteur en ration par rapport à la taille de l'écran. Défaut : 0.4"
 
-#: ../../../transition.php:155 ../../../transition.php:168
+#: ../../../transition.php:197 ../../../transition.php:210
 msgid "Backup performed"
 msgstr "Sauvegarde effectu&eacute;e"
 
-#: ../../../transition.php:156 ../../../transition.php:169
+#: ../../../transition.php:198 ../../../transition.php:211
 msgid "Impossible backup"
 msgstr "Sauvegarde impossible"
 
