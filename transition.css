@@ -3,3 +3,10 @@
 #transitionLoad td{border:1px solid #aaa;padding:3px 5px;min-width:150px;}
 #transitionLoad td:first-child{font-weight:700;}
 .transition ul{margin-left:50px;list-style:disc;}
+@media screen and (max-width:780px){
+	#transitionLoad table{margin:5px 0;}
+	#transitionLoad th{font-size:1em;}
+	#transitionLoad td,#transitionLoad th{padding:3px;min-width:10px;word-break:break-word;}
+	#transitionLoad tr{display:block;margin-bottom:10px;min-height:26px;}
+	#transitionLoad td:nth-child(1),#transitionLoad th:nth-child(1){display:block;text-align:left;width:100%;border:none;}
+}

@@ -11,7 +11,7 @@ function transition_load(){
 				var td=document.createElement('td');td.innerHTML=v.tit;tr.appendChild(td);
 				td=document.createElement('td');td.innerHTML=v.tr;tr.appendChild(td);
 				td=document.createElement('td');td.innerHTML=v.im;tr.appendChild(td);
-				td=document.createElement('td');if(v.cla1+v.sty1!='')td.innerHTML='<span style="color:#2F4F4F">'+v.cla1+'</span><br><span style="color:#8B4513">'+v.sty1+'</span>';tr.appendChild(td);
+				td=document.createElement('td');if(v.cla1+v.sty1!='')td.innerHTML='<span style="color:#2F4F4F">'+v.cla1+'</span><br><span style="color:#8B4513">'+v.sty1+'</span>';else td.innerHTML='&nbsp;';tr.appendChild(td);
 				td=document.createElement('td');if(v.cla2+v.sty2!='')td.innerHTML='<span style="color:#2F4F4F">'+v.cla2+'</span><br><span style="color:#8B4513">'+v.sty2+'</span>';tr.appendChild(td);
 				tr.appendChild(td);
 				jQuery("#transitionLoad table").append(tr);
