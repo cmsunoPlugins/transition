@@ -8,10 +8,8 @@ include('../../config.php');
 include('lang/lang.php');
 $q = file_get_contents('../../data/busy.json'); $a = json_decode($q,true); $Ubusy = $a['nom'];
 // ********************* actions *************************************************************************
-if (isset($_POST['action']))
-	{
-	switch ($_POST['action'])
-		{
+if (isset($_POST['action'])) {
+	switch ($_POST['action']) {
 		// ********************************************************************************************
 		case 'plugin': ?>
 		<link rel="stylesheet" type="text/css" media="screen" href="uno/plugins/transition/transition.css" />
@@ -32,10 +30,9 @@ if (isset($_POST['action']))
 						<select name="transitionChap" id="transitionChap">
 							<?php
 							$q = file_get_contents('../../data/'.$Ubusy.'/site.json'); $b = json_decode($q,true);
-							foreach($b['chap'] as $k=>$v)
-								{
+							foreach($b['chap'] as $k=>$v) {
 								echo '<option value="'.$v["d"].'">'.$v["t"].'</option>';
-								}
+							}
 							?>
 							
 						</select>
@@ -48,12 +45,11 @@ if (isset($_POST['action']))
 						<select name="transitionType" id="transitionType">
 							<option value="">-</option>
 							<?php
-							$q = array('bounce','flash','pulse','rubberBand','shake','headShake','swing','tada','wobble','jello','bounceIn','bounceInDown','bounceInLeft','bounceInRight','bounceInUp','fadeIn','fadeInDown','fadeInDownBig','fadeInLeft','fadeInLeftBig','fadeInRight','fadeInRightBig','fadeInUp','fadeInUpBig','flipInX','flipInY','lightSpeedIn','rotateIn','rotateInDownLeft','rotateInDownRight','rotateInUpLeft','rotateInUpRight','rotateOutDownLeft','rotateOutDownRight','rotateOutUpLeft','rotateOutUpRight','hinge','rollIn','rollOut','zoomIn','zoomInDown','zoomInLeft','zoomInRight','zoomInUp','zoomOut','zoomOutDown','zoomOutLeft','zoomOutRight','zoomOutUp','slideInDown','slideInLeft','slideInRight','slideInUp');
-							// DISABLE : 'bounceOut','bounceOutDown','bounceOutLeft','bounceOutRight','bounceOutUp','fadeOut','fadeOutDown','fadeOutDownBig','fadeOutLeft','fadeOutLeftBig','fadeOutRight','fadeOutRightBig','fadeOutUp','fadeOutUpBig','flipOutX','flipOutY','lightSpeedOut','rotateOut','jackInTheBox','slideOutDown','slideOutLeft','slideOutRight','slideOutUp'
-							foreach($q as $r)
-								{
+							$q = array('bounce','flash','pulse','rubberBand','shakeX','shakeY','headShake','swing','tada','wobble','jello','heartBeat','backInDown','backInLeft','backInRight','backInUp','bounceIn','bounceInDown','bounceInLeft','bounceInRight','bounceInUp','fadeIn','fadeInDown','fadeInDownBig','fadeInLeft','fadeInLeftBig','fadeInRight','fadeInRightBig','fadeInUp','fadeInUpBig','fadeInTopLeft','fadeInTopRight','fadeInBottomLeft','fadeInBottomRight','flip','flipInX','flipInY','lightSpeedInRight','lightSpeedInLeft','rotateIn','rotateInDownLeft','rotateInDownRight','rotateInUpLeft','rotateInUpRight','hinge','jackInTheBox','rollIn','zoomIn','zoomInDown','zoomInLeft','zoomInRight','zoomInUp','slideInDown','slideInLeft','slideInRight','slideInUp');
+							// DISABLE : Every Out (fadeOut...)
+							foreach($q as $r) {
 								echo '<option value="'.$r.'">'.$r.'</option>';
-								}
+							}
 							?>
 							
 						</select>
@@ -124,10 +120,9 @@ if (isset($_POST['action']))
 		case 'load':
 		$a = array("chap" => array());
 		if(!file_exists('../../data/'.$Ubusy.'/transition.json')) file_put_contents('../../data/'.$Ubusy.'/transition.json', json_encode($a));
-		else
-			{
+		else {
 			$q = file_get_contents('../../data/'.$Ubusy.'/transition.json'); $a = json_decode($q,true);
-			}
+		}
 		$q = file_get_contents('../../data/'.$Ubusy.'/site.json'); $b = json_decode($q,true);
 		$c = array(
 			'duration'=>(isset($a['duration'])?$a['duration']:'1'),
@@ -138,20 +133,18 @@ if (isset($_POST['action']))
 			'sty1'=>(isset($a['sty1'])?$a['sty1']:''),
 			'sty2'=>(isset($a['sty2'])?$a['sty2']:''),
 			'chap'=>array()
-			);
-		foreach($b['chap'] as $k=>$v)
-			{
+		);
+		foreach($b['chap'] as $k=>$v) {
 			$transition = (isset($a['chap'][$v['d']]['tr'])?$a['chap'][$v['d']]['tr']:"");
 			$img = (isset($a['chap'][$v['d']]['im'])?$a['chap'][$v['d']]['im']:"");
 			$cla1 = (isset($a['chap'][$v['d']]['cla1'])?$a['chap'][$v['d']]['cla1']:"");
 			$cla2 = (isset($a['chap'][$v['d']]['cla2'])?$a['chap'][$v['d']]['cla2']:"");
 			$sty1 = (isset($a['chap'][$v['d']]['sty1'])?$a['chap'][$v['d']]['sty1']:"");
 			$sty2 = (isset($a['chap'][$v['d']]['sty2'])?$a['chap'][$v['d']]['sty2']:"");
-			if($img)
-				{
+			if($img) {
 				$img = explode('/',$img);
 				$img = $img[count($img)-1];
-				}
+			}
 			$c['chap'][] = array(
 				"tit" => $v["t"],
 				"tr" => $transition,
@@ -160,8 +153,8 @@ if (isset($_POST['action']))
 				"cla2" => $cla2,
 				"sty1" => $sty1,
 				"sty2" => $sty2
-				);
-			}
+			);
+		}
 		echo stripslashes(json_encode($c)); // => jQuery Ajax
 		break;
 		// ********************************************************************************************
@@ -175,24 +168,21 @@ if (isset($_POST['action']))
 		$sty2 = (!empty($_POST['sty2'])?strip_tags($_POST['sty2']):'');
 		$q = file_get_contents('../../data/'.$Ubusy.'/transition.json'); $a = json_decode($q,true);
 		$q = file_get_contents('../../data/'.$Ubusy.'/site.json'); $b = json_decode($q,true);
-		if($chap!==false)
-			{
+		if($chap!==false) {
 			$a['chap'][$chap]['tr'] = $typ;
 			$a['chap'][$chap]['im'] = $img;
 			$a['chap'][$chap]['cla1'] = $cla1;
 			$a['chap'][$chap]['cla2'] = $cla2;
 			$a['chap'][$chap]['sty1'] = $sty1;
 			$a['chap'][$chap]['sty2'] = $sty2;
-			foreach($b['chap'] as $r)
-				{
-				if($r['d']==$chap)
-					{
+			foreach($b['chap'] as $r) {
+				if($r['d']==$chap) {
 					$w = strtr(utf8_decode($r['t']),'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿ','aaaaaaaceeeeiiiidnoooooouuuuybsaaaaaaaceeeeiiiidnoooooouuuyyby');
 					$w = preg_replace('/[^a-zA-Z0-9%]/s','',$w);
 					$a['chap'][$chap]['na'] = $w;
-					}
 				}
 			}
+		}
 		$out = json_encode($a);
 		if(file_put_contents('../../data/'.$Ubusy.'/transition.json', $out)) echo T_('Backup performed');
 		else echo '!'.T_('Impossible backup');
@@ -211,8 +201,8 @@ if (isset($_POST['action']))
 		else echo '!'.T_('Impossible backup');
 		break;
 		// ********************************************************************************************
-		}
+	}
 	clearstatcache();
 	exit;
-	}
+}
 ?>

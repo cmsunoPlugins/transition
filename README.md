@@ -24,12 +24,13 @@ u::::::::::::::u  n::::n    n::::n  o:::::ooooo:::::o
 ## Transition ##
 
 Create beautiful transitions between chapters.
-Use animate.css and jquery.imageScroll.js.
+Use [animate.css](https://animate.style/) and jquery.imageScroll.js.
 
 [CMSUno](https://github.com/boiteasite/cmsuno)
 
 ### Versions ###
 
+* 1.2 - 29/09/2022 : Upgrade animate.css to version 4 (V4.1.1)
 * 1.1.1 - 28/09/2022 : Responsive display.
 * 1.1 - 27/12/2017 : Add Div & sub-Div.
 * 1.0 - 04/06/2017 : First stable version.
